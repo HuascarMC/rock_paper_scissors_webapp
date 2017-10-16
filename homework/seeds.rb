@@ -6,8 +6,9 @@ get '/' do
   erb(:home)
 end
 
-get '/:p/:c' do
-  rps = RPS.new(params[:p].to_s, params[:c].to_s)
-  @game = rps.play()
-  erb(:game)
+get '/:w/:c' do
+  array = ["R", "P", "S"]
+  rps = RPS.new(params[:w].to_s, array.sample)
+  @result = rps.play()
+  erb(:result)
 end

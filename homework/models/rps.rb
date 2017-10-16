@@ -17,16 +17,16 @@ class RPS
       end
 
       case @player == "P"
-      when @cpu == "R"
-        return "You win"
-      when @player == "S"
-        return "You lose"
+        when @cpu == "R"
+          return "You win"
+        when @cpu == "S"
+          return "You lose"
       end
 
       case @player == "S"
-      when @cpu == "P"
+      when @cpu == "R"
         return "You win"
-      when @player == "R"
+      when @cpu == "P"
         return "You lose"
       end
     end
